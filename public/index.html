@@ -1,43 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script> -->
+
     <title>React App</title>
-  </head>
-  <body>
+</head>
+<body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    <script>
+        // const firebaseConfig = {
+        // apiKey: "AIzaSyB14bOfq3F5QJpcpbt9g9vUIHnBbMif1PM",
+        // authDomain: "painel-de-livros.firebaseapp.com",
+        // databaseURL: "https://painel-de-livros.firebaseio.com",
+        // projectId: "painel-de-livros",
+        // storageBucket: "painel-de-livros.appspot.com",
+        // messagingSenderId: "466132567675",
+        // appId: "1:466132567675:web:215b4f0a877a0e950dc4de",
+        // measurementId: "G-E4PKTB3VM4"
+        // };
+        // firebase.initializeApp(firebaseConfig);
+        // firebase.analytics();
+
+        // var bd = firebase.firestore();
+
+        // console.log('entro aqui')
+
+
+        //singleEventListener (Não Atualiza! Vamos ouvi-la uma única vez!)
+        // bd.collection("books").doc("1").get().then(function (doc){
+
+        //     if(doc.exists) {
+
+        //         const dados = doc.data()
+        //         const key = doc.id
+
+        //         const id = dados.id
+        //         const title = dados.title
+
+        //         console.log("NOME DA PASTA: "+ key+" ID:  "+id +"TITLE: "+title)
+
+        //     }else {
+
+        //         console.log("Não Existe")
+        //     }
+        // })
+
+
+/*
+        //EventListener (Mostra tudo o que ocorre na pasta, inclusive as atualizações)
+        bd.collection("books").doc("1").onSnapshot(function (doc){
+
+        if(doc.exists) {
+
+            const dados = doc.data()
+            const key = doc.id
+
+            const id = dados.id
+            const title = dados.title
+
+            console.log("NOME DA PASTA: "+ key+" ID:  "+id +"TITLE: "+title)
+
+        }else {
+
+            console.log("Não Existe")
+        }
+        })
+*/
+
+        //childEventListener Armazena todos os itens que estiverem dentro da minha categoria
+    //     bd.collection("books").onSnapshot(function(documentos){
+
+    //         documentos.docChanges().forEach(function(changes){
+
+    //             if(changes.type === "added") {
+
+    //                 const documento = changes.doc
+
+    //                 const dados = documento.data()
+    //                 const key = documento.id
+
+    //                 console.log("Added Nome da pasta :"+ key)
+    //             }
+
+    //             else if(changes.type === "modified") {
+    //                 const documento = changes.doc
+
+    //                 const dados = documento.data()
+    //                 const key = documento.id
+
+    //                 console.log("Modified Nome da pasta :"+ key)
+    //             }
+
+    //             else if(changes.type === "removed") {
+    //                 const documento = changes.doc
+
+    //                 const dados = documento.data()
+    //                 const key = documento.id
+
+    //                 console.log("Removed Nome da pasta :"+ key)
+    //             }
+    //         })
+    //     })
+
+
+
+    // function criarItemsTabela() {
+
+    // }
+
+    </script>
+
+</body>
 </html>
